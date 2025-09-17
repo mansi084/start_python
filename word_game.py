@@ -34,13 +34,13 @@ def main():
         else:
             hint = ""
             for i in range(len(user_guess)):
-                if i < len(user_guess) and user_guess[i]== password:
+                if i < len(user_guess) and user_guess[i] == password[i]:
                     hint+=password[i]
                 else:
                     hint+="_"
 
             print("Hint : ",hint)   
-               
+        attempt+=1       
     print("Game over!")  
 
 main()
