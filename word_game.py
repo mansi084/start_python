@@ -32,10 +32,15 @@ def main():
             print("Congratulations! You have guessed the right word in ",attempt, " attempts.")
             break
         else:
-            print("Nice try. Try again.")
-            attempt+=1
+            hint = ""
+            for i in range(len(user_guess)):
+                if i < len(user_guess) and user_guess[i]== password:
+                    hint+=password[i]
+                else:
+                    hint+="_"
 
-
-
+            print("Hint : ",hint)   
+               
+    print("Game over!")  
 
 main()
