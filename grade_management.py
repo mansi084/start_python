@@ -12,7 +12,7 @@ def update_grades(grades):
 
 def delete_grades(grades):
     item = input("Enter the student name whose marks you want to delete : ")
-    grades[item] = "Null"   
+    del(grades[item])   
 
 def exit_app():
     print("Thank you for using the app!")
