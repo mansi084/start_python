@@ -1,7 +1,7 @@
 def add_task(tasks):
     while True:
         user_input = input("Keep entering tasks or type done to stop entering : ").lower().strip()
-        if user_input == "stop":
+        if user_input == "done":
             break
         else:
             tasks.append(user_input)
