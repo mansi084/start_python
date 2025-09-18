@@ -1,8 +1,10 @@
 def add_task(tasks):
-    total_tasks= int(input("Enter number of tasks you want to enter : "))
-    for i in range(1,total_tasks+1):
-        task_name = input(f'Enter task number {i} : ') 
-        tasks.append(task_name)
+    while True:
+        user_input = input("Keep entering tasks or type done to stop entering : ").lower().strip()
+        if user_input == "stop":
+            break
+        else:
+            tasks.append(user_input)
 
 def view_task(tasks):
     print(f"Here are the tasks: \n{tasks}")
